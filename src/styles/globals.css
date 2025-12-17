@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Deep Dark Theme with Electric Blue and NEON GREEN/YELLOW Accents */
+    --primary-bg: #03040C;
+    --secondary-bg: #0D111D;
+    --electric-blue: #00FFFF;
+    --accent-green: #39FF14;
+    --text-light: #E0E7FF;
+    --text-muted: #8B9DC3;
+
+    --background: #03040C;
+    --foreground: #E0E7FF;
+    --card: #0D111D;
+    --card-foreground: #E0E7FF;
+    --muted: #0D111D;
+    --muted-foreground: #8B9DC3;
+    --border: rgba(0, 255, 255, 0.1);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: #03040C;
+    color: #E0E7FF;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', 'Inter', sans-serif;
+    color: #E0E7FF;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #00FFFF;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #03040C;
+  }
+
+  /* Ensure all text elements are visible */
+  p, span, div, a, label, input, textarea {
+    color: inherit;
+  }
+
+  /* Input placeholder styling */
+  ::placeholder {
+    color: #8B9DC3;
+    opacity: 0.6;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background-image: linear-gradient(90deg, #00FFFF, #39FF14);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
